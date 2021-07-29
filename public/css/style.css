@@ -1,0 +1,26 @@
+.add {
+  margin: 20px 0;
+}
+.card {
+  margin: 0 20px;
+}
+.itemsContainer {
+  display: flex;
+  margin: 0 -20px;
+}
+.form {
+  width: 300px;
+}
+.card img {
+  height: 200px;
+}
+.weather {
+  background-color: #ccddff;
+  width: 200px;
+  margin-bottom: 15px;
+}
+h1 {
+  font-weight: bold;
+  color: #3377FF;
+}
+

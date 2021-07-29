@@ -1,0 +1,50 @@
+{{! <a href="/allitems/add" class="btn btn-primary">add item</a> }}
+<h1>Add photo</h1>
+<form
+  name="addphoto"
+  action="/upload"
+  method="POST"
+  enctype="multipart/form-data"
+>
+  <label>File</label><br />
+  <input type="file" name="filedata" /><br /><br />
+  <label>Place</label>
+  <br />
+  <input
+    class="form-control form"
+    name="place"
+    placeholder="city"
+    type="text"
+  />
+  <br />
+  <label>Description</label>
+  <br />
+  <textarea
+    class="form-control form"
+    placeholder="description"
+    name="description"
+    id="description"
+  ></textarea>
+  <br />
+  <input type="submit" value="upload" class="btn btn-primary" />
+</form>
+<br /><br />
+<div class="weather">
+
+</div>
+<div class="itemsContainer">
+  {{#each allItems}}
+    <div data-place={{this.place}} class="card" style="width: 18rem;">
+      <img src="{{this.image}}" class="card-img-top" alt="{{this.image}}" />
+      <h3>{{this.place}}</h3>
+      <div class="card-body">
+        <p class="card-text">{{this.description}}</p>
+        <a href="/edit" class="btn btn-primary">edit</a>
+        <button data-button class="btn btn-primary">info</button>
+      </div>
+    </div>
+  {{/each}}
+</div>
+<div class="weather">
+
+</div>

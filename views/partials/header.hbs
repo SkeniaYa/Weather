@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        {{#if userId}}
+         <li class="nav-item">
+            <div class="nav-link">{{userName}}'s profile</div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/allitems">All items</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/auth/signout">Log out</a>
+          </li>
+        {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="/auth/signup">Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/auth/signin">Log in</a>
+          </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>
